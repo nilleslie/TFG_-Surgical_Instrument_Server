@@ -84,7 +84,7 @@ def send_coords_to_modbus(x_cm, y_cm, z_cm=-0.8 ):
     
         
         server.data_bank.set_input_registers(85, [1])  # Activation bit ON
-        print(f"📤 Sent: X={x_i} Y={y_i} Z={z_i} mm | Signs: {s_x}, {s_y}, {s_z} | Bit 10 = True")
+        print(f"Sent: X={x_i} Y={y_i} Z={z_i} mm | Signs: {s_x}, {s_y}, {s_z} | Bit 10 = True")
         sleep(0.5)
         server.data_bank.set_input_registers(85, [0]) # Reset activation bit
         sleep(1)
@@ -102,7 +102,7 @@ def continuous_listening():
             try:
                 audio = recognizer.listen(source, timeout=3, phrase_time_limit=4)
                 text = recognizer.recognize_google(audio, language="es-ES")
-                print(f"🎙️ Command: {text}")
+                print(f"Command: {text}")
                 last_command = text.lower()
             except: continue
 
@@ -139,7 +139,7 @@ while True:
 
     if matched_object and not sent_this_cycle:
         _, _, X_match, Y_match = detected_objects[matched_object]
-        print(f"🎯 Matched: {matched_object.upper()} at {X_match:.1f}, {Y_match:.1f} cm")
+        print(f"Matched: {matched_object.upper()} at {X_match:.1f}, {Y_match:.1f} cm")
         send_coords_to_modbus(X_match, Y_match)
         sent_this_cycle = True
     for label, (u, v, X, Y) in detected_objects.items():
