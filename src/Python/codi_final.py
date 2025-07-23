@@ -12,7 +12,7 @@ from time import sleep
 
 # CONFIG
 
-H = np.load("MAT_H_LAB2.npy")
+H = np.load("Homografia.npy")
 model = YOLO("best.pt")
 cap = cv2.VideoCapture(1, cv2.CAP_DSHOW)
 mic = sr.Microphone(device_index=3)
