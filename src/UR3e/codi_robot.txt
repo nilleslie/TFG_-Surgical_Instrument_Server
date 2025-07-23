@@ -1,0 +1,42 @@
+ Program
+   Robot Program
+     'First we initialize the coordinates to 0'
+     c_x≔0
+     c_y≔0
+     c_z≔0
+     'We associate the coordinates received by modbus to a variable'
+     c_x≔cx
+     c_y≔cy
+     c_z≔cz
+     'We apply the signs to the abs values to reconstruct the coordinates'
+     s_1≔s1
+     s_2≔s2
+     s_3≔s3
+     'Reeconstruction of the coordinates with their respective sign'
+     c_x≔(c_x/10) *(1-2*s_1)
+     c_y≔(c_y/10) *(1-2*s_2)
+     c_z≔(c_z/10) *(1-2*s_3)
+     MoveJ
+       home
+     'Activation bit '
+     Loop act≠1
+       Wait: 2.0
+     Popup: Coordinates send correctly
+     Wait: 0.01
+     p_tool≔p[c_x/100, c_y/100, c_z/100, 0.841, 3.028, -0.326]
+     Popup
+     MoveJ
+       approach
+       Wait: 2.0
+     MoveL
+       p_tool
+       Popup: how do you see it?
+       Vacuum Grip  (1)
+       Wait: 1.0
+       MoveJ
+         tray
+         Wait: 0.5
+         Vacuum Release  (1)
+         Wait: 2.0
+         home         
+       Wait: 3.0
