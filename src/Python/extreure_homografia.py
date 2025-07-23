@@ -48,7 +48,7 @@ real_world_points = np.array(real_world_points, dtype=np.float32)
 
 # === PART 4: Compute homography ===
 H, status = cv2.findHomography(image_points, real_world_points)
-np.save("MAT_H_LAB2.npy", H)
+np.save("Homografia.npy", H)
 np.save("image_points.npy", image_points)
 np.save("real_world_points.npy", real_world_points)
 
