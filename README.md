@@ -9,10 +9,12 @@ Les ordres orals són captades per un micròfon i interpretades per un script Py
 
 ## Estructura del repositori
 
-- `docs/`: Manuals d’instal·lació i ús amb imatges pas a pas.
+- `docs/`: Memòria, Resum, Manuals d’instal·lació i ús amb imatges pas a pas.
 - `media/`: Vídeos i captures de la demostració.
-- `src/`: Scripts de Python (reconeixement d’objectes i veu, servidor MODBUS).
-- `program_ur/`: Fitxers `.urp` per carregar al robot UR3.
+- `src/`: Scripts de Python finals.
+-  `tests/`: Scripts de proves parcials(funcionament del servidor MODBUS, proves de reconeixemnt de veu i abertura de la càmara).
+- `SIS_project/`: Fitxers `.urp` per carregar al robot UR3.
+-  `LICENSE`: Llicència MIT que regula l’ús i distribució del projecte.
 - `README.md`: Aquest document.
 
 ---
