@@ -1,0 +1,6 @@
+train: Test-Train Groups/train-obj_detector.txt
+val: Test-Train Groups/test-obj_detector.txt
+nc: 4 #Number of classes
+names: ['Scalpel', 'Clamp', 'Straight Scissor', 'Curved Scissor']
+
+path: C:/Users/nbsal/Desktop/TFG/Surgical-Dataset
