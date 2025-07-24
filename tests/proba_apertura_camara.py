@@ -1,6 +1,7 @@
 import cv2
 
 # Initialize the webcam
+#Use the correct index here, usually intern webcams are set to 0 by default
 cap = cv2.VideoCapture(0)
 
 # Set camera resolution (optional)
